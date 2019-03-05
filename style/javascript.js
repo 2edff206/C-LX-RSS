@@ -56,7 +56,7 @@ Date.prototype.getWeekNumber = function () {
 
 /* date from YYYYMMDDHHIISS format */
 Date.dateFromYMDHIS = function(d) {
-	var d = new Date(d.substr(0, 4), d.substr(4, 2) - 1, d.substr(6, 2), d.substr(8, 2), d.substr(10, 2), d.substr(12, 2));
+	var d = new Date(d.toString().substr(0, 4), d.toString().substr(4, 2) - 1, d.toString().substr(6, 2), d.toString().substr(8, 2), d.toString().substr(10, 2), d.toString().substr(12, 2));
 	//var d = d.substr(0, 4) + '' + d.substr(4, 2) - 1 + d.substr(6, 2) + d.substr(8, 2) + d.substr(10, 2) + d.substr(12, 2);
 	return d;
 }
