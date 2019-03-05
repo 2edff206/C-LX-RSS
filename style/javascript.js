@@ -1042,7 +1042,101 @@ function unMarkAsRemove(link) {
 	li.getElementsByClassName('remove-feed')[0].value = 1;
 }
 
+/* for links : hide the FAB button when focus on link field (more conveniant for mobile UX) */
+      
+      
+        
 
+function hideFAB()
+      
+      
+        
+{
+      
+      
+        
+    if (document.getElementById('fab')) {
+      
+      
+        
+        document.getElementById('fab').classList.add('hidden');
+      
+      
+        
+    }
+      
+      
+        
+}
+      
+      
+        
+function unHideFAB()
+      
+      
+        
+{
+      
+      
+        
+    if (document.getElementById('fab')) {
+      
+      
+        
+        document.getElementById('fab').classList.remove('hidden');
+      
+      
+        
+    }
+      
+      
+        
+}
+      
+      
+        
+
+
+      
+      
+        
+/* for several pages: eventlistener to show/hide FAB on scrolling (avoids FAB from beeing in the way) */
+      
+      
+        
+function scrollingFabHideShow()
+      
+      
+        
+{
+      
+      
+        
+    if ((document.body.getBoundingClientRect()).top > scrollPos) {
+      
+      
+        
+        unHideFAB();
+      
+      
+        
+    } else {
+      
+      
+        
+        hideFAB();
+      
+      
+        
+    }
+      
+      
+        
+    scrollPos = (document.body.getBoundingClientRect()).top;
+      
+      
+        
+}
 
 
 
